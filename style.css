@@ -1,0 +1,443 @@
+@font-face {
+    font-family: neue;
+    src: url(./assets/NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+    font-family: smallneue;
+    src: url(./assets/NeueHaasDisplayLight.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    /* background-color: black; */
+
+    z-index: 10;
+    position: relative;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: rgb(239, 234, 227);
+}
+#navbar{
+    padding: 35px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navright a{
+    z-index: 99;
+    position: relative;
+    border: 1px solid #8a8a8a89;
+    border-radius:23px;
+    padding: 12px 20px;
+    font-family: smallneue;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+}
+#navright a::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -99;
+    border-radius: 50%;
+    left: 0;
+    bottom: -100%;
+    transition: all ease .3s;
+}
+#navright a:hover::after{
+    bottom: 0;
+    border-radius: 0;
+    transition: all ease .3s;
+}
+#navright a:hover{
+    color: white;
+}
+
+#navright{
+    gap: 10px;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 20px;
+}
+#written{
+    height: 35vw;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+#textleft h3{
+    margin-left: 30px;
+    /* background-color: green; */
+    font-size: 1.8vw;
+    line-height: 1;
+    font-family: neue;
+}
+#textleft{
+    width: 28vw;
+}
+#textright{
+    width: 40.5vw;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#textright h1{
+    font-size: 10.5vw;
+    line-height: .8;
+    font-family: neue;
+}
+#textright .middle{
+   text-align: end;
+   margin-right: 18px;
+}
+hr{
+    margin-left: 35px;
+}
+#page1 video{
+    position: relative;
+    margin: 0 20px;
+    margin-top: 4vw;
+    border-radius: 20px;
+    width: 97%;
+}
+#hero{
+    height: 43vw;
+    width:43vw;
+    position: absolute;
+    right: 0;
+    top: 42vw;
+}
+#hero1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 50%;
+    background:linear-gradient( #FE330A, #fe330aec);
+    filter: blur(15px);
+}
+#hero2{
+    height: 35vw;
+    width: 35vw;
+    border-radius: 37%;
+    position: absolute;
+    background:linear-gradient( #FE330A, #fe330aec);
+    filter: blur(15px);
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero3{
+    height: 25vw;
+    width: 35vw;
+    border-radius: 50%;
+    position: absolute;
+    background:linear-gradient( #FE330A, #fe330aec);
+    filter: blur(15px);
+    animation-name: anime1;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anime1{
+    from{
+        transform: translate(38%,-15%);
+    }
+    to{
+        transform: translate(-20%,11%);
+    }
+}
+@keyframes anime2{
+    from{
+        transform: translate(-30%,-7%);
+    }
+    to{
+        transform: translate(50%,30%);
+    }
+}
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+    position: relative;
+}
+#movingtext{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#movingtext::-webkit-scrollbar{
+    display:none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-name: move;
+    animation-iteration-count: infinite;
+}
+#gola{
+    height: 70px;
+    width: 70px;
+    background-color: #FE330A;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+.con h1{
+    font-size: 10vw;
+    font-family: neue;
+    display: inline-block;
+}
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#bottom2{
+    padding: 2vw 4vw;
+    width: 95%;
+    height: 55vw;
+    background-color:rgb(239, 234, 227);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    justify-content: space-between;
+}
+#leftbtm{
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+#leftbtm h1{
+    width: 75%;
+    line-height: 1;
+    font-size: 4.3vw;
+    font-family: neue;
+}
+#rightbtm{
+    width: 28%;
+    /* background-color: brown; */
+
+}
+#rightbtm img{
+    margin-top: 16vw;
+    width: 100%;
+    border-radius: 15px;
+}
+#rightbtm p{
+    margin-top: 3vw;
+    /* font-size: 1vw; */
+    font-family: smallneue;
+}
+#ball{
+    width: 35vw;
+    height: 35vw;
+    background:linear-gradient(to top right,#FE330A,#fe670a);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -9;
+    margin-left: 20vw;
+    margin-top: 10vw;
+    filter: blur(15px);
+    animation-name: balleffect;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+@keyframes balleffect {
+    from{
+        filter: blur(15px);
+        transform: skew(-15deg) !important;
+        transform: translate(10%,-16%);
+    }
+    to{
+        filter: blur(20px);
+        transform:skew(10deg);
+        transform: translate(0,26%);
+    }
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(239, 234, 227);
+    position: relative;
+}
+.elem{
+    padding: 2vw 2vw;
+    height: 120px;
+    width: 100%;
+    /* background-color: yellow; */
+    position: relative;
+    border-bottom: 1px solid rgba(120, 119, 119, 0.407);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#page3 .elem h2{
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 9;
+    font-size: 3.5vw;
+    font-family: neue;
+}
+.elemright h4{
+    font-weight: 900;
+    text-align: end;
+    position: relative;
+    z-index: 9;
+    font-family: smallneue;
+}
+.elemright p{
+    position: relative;
+    z-index: 9;
+    color: rgba(0, 0, 0, 0.594);
+    font-family: smallneue;
+}
+.overlay{
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+.elem img{
+    display: none;
+}
+.elem:hover .overlay {
+    top: 0;
+}
+/* #elem-container{
+    background-color: gray;
+} */
+#fixedimg{
+    /* background-color: rebeccapurple; */
+    height: 31vw;
+    width: 25vw;
+    border-radius: 10px;
+    z-index: 11;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+#fixedimg:hover{
+    pointer-events: none;
+}
+#page4{
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding:10vw 0;
+}
+/* .swiper {
+    margin-left: 5vw;
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+.swiper-wrapper{
+   width: 100%;
+}
+
+.swiper-slide {
+    border-left: 1px solid gray;
+    width: 30%;
+    padding: 0 2vw;
+  } */
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+}
+#footer{
+    z-index: 9;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: black;
+}
+#footer h1{
+    color: #EFEAE3;
+    width: 100%;
+    height: 370px;
+    border-bottom: 1px solid rgb(106, 104, 104);
+    font-size: 24vw;
+    font-family: neue;
+    margin-bottom: 5vw;
+    /* background-color: red; */
+}
+#footerdiv{
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 22vh;
+    /* background-color: rebeccapurple; */
+}
+#footerleft h3{
+    margin-left: 70px;
+    font-family: neue;
+    color: white;
+    font-size: 2.5vw;
+}
+#footerright{
+    /* background-color: blue; */
+    width: 20%;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+
+}
+#footerright p{
+    width: 90%;
+    margin-right: 10px;
+    font-family: smallneue;
+    color: white;
+    font-size: 20px;
+}
+#footerright input {
+    height: 50px;
+    margin-top: 15px;
+    background: transparent;
+    border: transparent;
+    /* background-color: aqua; */
+}
